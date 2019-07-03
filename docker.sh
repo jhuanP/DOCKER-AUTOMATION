@@ -6,12 +6,12 @@ read imgName
 
 echo "Are wanting to build docker image named $imgName?"
 
-read boolean
+read confirmation
      
-if [ $boolean = yes ]
+if [ $confirmation = yes ]
 then
      docker build -t $imgName .
-elif [ $boolean = no ]
+elif [ $confirmation = no ]
 then
     echo "No image was built"
     exit
